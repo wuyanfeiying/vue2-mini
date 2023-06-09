@@ -1,4 +1,7 @@
 学习响应式原理，Vue2 简易版
+
+![img/example.png](img/example.png)
+
 ```
 Vue2-mini
 ├─ Compiler.js
@@ -9,3 +12,5 @@ Vue2-mini
 └─ Watcher.js
 
 ```
+
+文章：https://juejin.cn/post/7242519176853356601
