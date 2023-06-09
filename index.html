@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学习响应式原理，Vue2 简易版</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>学习响应式原理，Vue2 简易版</h1>
+
+    <hr/>
+    <h4>双向数据绑定：</h4>    
+    <input type="text" v-model="msg">
+    <h6>{{msg}}</h6>
+    <hr/>
+    <h4>v-html：</h4>    
+    <div v-html="htmlStr"></div>
+    <hr/>
+    <h4>v-text</h4>    
+    <div v-text="msg"></div>
+    <hr/>
+    <h4>v-on:click</h4>
+    <span>{{number}}</span>
+    <button v-on:click="changeCount">点击+1</button>
+  </div>
+  <script src="Dep.js"></script>
+  <script src="Watcher.js"></script>
+  <script src="Compiler.js"></script>
+  <script src="Observer.js"></script>
+  <script src="vue.js"></script>
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        msg: 'hi~ wuyanfeiying',
+        htmlStr: `<span style='color:green;'>你好哇~</span>`,
+        number: 0
+      },
+      methods: {
+        changeCount() {
+          this.number ++
+        }
+      }
+    })
+    console.log("🚀 ~ file: index.html:28 ~ vm:", vm)
+  </script>
+</body>
+</html>
